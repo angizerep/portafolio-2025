@@ -20,11 +20,11 @@ Adicional el proyecto cuenta con una carpeta 'assets/img/' donde se encuantra la
 - Buenas prácticas: Según el estándar en desarrollo web es buena práctica agrupar en una carpeta 'assets/' todos los recursos externos al HTML.
 
 ## Estructura de archivos
-├── index.html
-├── README.md
-└── assets/
-    └── img/
-        └── imagen-profile.jpeg
+index.html
+README.md
+assets/
+    img/
+        imagen-profile.jpeg
 
 ## ¿Qué secciones tiene mi página?
 1. Encabezado
