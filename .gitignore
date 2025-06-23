@@ -1,0 +1,15 @@
+# Ignorar configuración de VSCode
+.vscode/
+
+# Ignorar archivos temporales del sistema
+.DS_Store
+
+# Ignorar archivos temporales de macOS o editores
+*.log
+*.tmp
+
+# Ignorar backups de editores
+*.swp
+*.swo
+*~
+
