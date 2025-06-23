@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Ángeles Pérez</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,24 +19,35 @@
             <header>
                 <h2>Sobre mí</h2>
             </header>
-            <p>¡Hola! Soy Ángeles Pérez, una <strong>desarrolladora</strong> con más de 3 años de
-                experiencia en el ecosistema Salesforce. Me gusta participar en la creación de soluciones robustas
-                y eficientes utilizando APEX, Lightning Web Components (LWC) y Flujos.</p>
-            <figure>
-                <img src="assets/img/imagen-profile.jpeg" alt="Foto de perfil de Ángeles Pérez" width="15%">
-            </figure>
-            <dl>
-                <dt>Ciudad:</dt>
-                <dd>Caracas, Venezuela</dd>
-                <dt>Ocupación:</dt>
-                <dd>Salesforce Developer</dd>
-                <dt>Modalidad:</dt>
-                <dd>100% Remoto</dd>
-                <dt>Idiomas:</dt>
-                <dd>Español (nativo), Inglés (intermedio)</dd>
-            </dl>
+            <div class="presentacion">
+                <figure>
+                    <img class="profile-picture" src="assets/img/imagen-profile.jpeg" alt="Foto de perfil de Ángeles Pérez">
+                </figure>
+                <p>¡Hola! Soy Ángeles Pérez, una <strong>desarrolladora</strong> con más de 3 años de
+                    experiencia en el ecosistema Salesforce. Me gusta participar en la creación de soluciones robustas
+                    y eficientes utilizando APEX, Lightning Web Components (LWC) y Flujos.</p>
+            </div>
+            <div class="datos-personales">
+                <header>
+                    <h3>Datos personales</h3>
+                </header>
+                <div class="datos-personales-list">
+                    <dl class="bloque">
+                        <dt>Ciudad:</dt>
+                        <dd>Caracas, Venezuela</dd>
+                        <dt>Ocupación:</dt>
+                        <dd>Salesforce Developer</dd>
+                    </dl>
+                    <dl class="bloque">
+                        <dt>Modalidad:</dt>
+                        <dd>100% Remoto</dd>
+                        <dt>Idiomas:</dt>
+                        <dd>Español (nativo), Inglés (intermedio)</dd>
+                    </dl>
+                </div>
+            </div>
         </section>
-        <hr>
+
         <section id="proyectos">
             <header>
                 <h2>Proyectos</h2>
@@ -70,7 +83,7 @@
                 </ul>
             </section>
         </section>
-        <hr>
+
         <section id="habilidades-intereses">
             <header>
                 <h2>Habilidades e Intereses</h2>
@@ -96,7 +109,7 @@
                 </ol>
             </section>
         </section>
-        <hr>
+
         <section id="contactos-redes">
             <header>
                 <h2>Contacto y Redes</h2>
@@ -109,8 +122,6 @@
                 <li><a href="https://www.linkedin.com/in/angeles-perez-p/" target="_blank" rel="noopener noreferrer"
                         title="Visitar mi perfil de LinkedIn">LinkedIn</a></li>
             </ul>
-        </section>
-        <hr>
     </main>
 
     <footer>
