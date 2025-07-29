@@ -17,8 +17,45 @@ contactForm.addEventListener('submit', function (e) {
 });
 
 modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
+    if (e.target === modalOverlay || e.target.classList.contains('modal-close')) {
         modalOverlay.style.display = 'none';
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    const modalOverlay = document.getElementById('thankYouModal');
+    const modalMessage = document.getElementById('modalMessage');
+    const modalClose = document.querySelector('.modal-close');
+
+    if (contactForm && modalOverlay && modalMessage && modalClose) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const apellido = document.getElementById('apellido').value.trim();
+
+            modalMessage.textContent = `¡Gracias por tu mensaje, ${nombre} ${apellido}! Pronto me pondré en contacto contigo.`;
+
+            modalOverlay.style.display = 'flex';
+            contactForm.reset();
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay || e.target === modalClose) {
+                modalOverlay.style.display = 'none';
+            }
+        });
+    }
+});
+
+document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+const contador = localStorage.getItem('visitas') || 0;
+localStorage.setItem('visitas', Number(contador) + 1);
+
+const mensaje = document.createElement('p');
+mensaje.textContent = `Has visitado esta página ${Number(contador) + 1} veces.`;
+document.querySelector('footer').appendChild(mensaje);
