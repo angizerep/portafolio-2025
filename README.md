@@ -142,3 +142,61 @@ Para separadores visuales entre secciones, mejorando la lectura sin necesidad de
 - En la sección 'Sobre mí', se agregó <div class="presentacion"> con imagen float, para incluir imagen de perfil a la izquierda del texto.
 - En la sección de datos personales, se reemplazó el <dl> por un <div class="datos-personales-list"> con dos bloques , para presentar la información personal en dos columnas
 - Se creó el encabezado h3 en 'Datos personales' y se aplicó estilo para jerarquizar visualmente esa subsección.
+
+## Actualizaciones Finales y Aplicación de JavaScript
+
+### Estructura final del proyecto
+
+```
+Portafolio/
+├── index.html                # Página principal con estructura semántica
+├── README.md                 # Documento explicativo del proyecto
+├── assets/
+│   ├── img/
+│   │   └── imagen-profile.jpeg   # Imagen de perfil
+│   ├── css/
+│   │   └── style.css             # Hoja de estilos
+│   └── js/
+│       └── script.js            # Lógica de interacción con el usuario
+└── informes/                   # Carpeta destinada a informes adicionales
+```
+
+### Funcionalidades agregadas con JavaScript (`assets/js/script.js`)
+
+1. **Formulario de contacto interactivo**
+   - Captura nombre, apellido, correo y mensaje.
+   - Al enviar, muestra un **modal de agradecimiento personalizado** con el nombre del visitante.
+   - El modal se cierra al hacer clic fuera del mismo o en el ícono de cierre.
+
+2. **Modo oscuro (dark mode)**
+   - Se añadió un botón con ícono 🌙 para **alternar entre modo claro y oscuro**.
+   - Cambia colores de fondo, textos, enlaces y el borde de la imagen de perfil.
+   - Se realiza con `classList.toggle('dark-mode')` sobre el `<body>`.
+
+3. **Contador de visitas con LocalStorage**
+   - Usa `localStorage` para contar cuántas veces se ha visitado el portafolio desde el mismo navegador.
+   - El número de visitas se muestra dinámicamente en el **footer**.
+
+### Estilos agregados al CSS (`assets/css/style.css`)
+
+1. **Modo oscuro (`.dark-mode`)**
+   - Define nuevos colores para fondo, texto, enlaces y elementos destacados.
+   - Se adapta a todas las secciones principales y al modal.
+
+2. **Modal personalizado de confirmación (`.modal-overlay` y `.modal`)**
+   - Centrado en pantalla con fondo translúcido.
+   - Caja modal blanca con borde redondeado, mensaje y botón de cierre.
+   - Estilo responsive para que se vea bien en distintas pantallas.
+
+3. **Formulario estilizado**
+   - Inputs y textarea con estilos claros y tipografía coherente.
+   - Botón redondeado con color principal (`#4e9af1`) y efecto hover.
+   - Organización del formulario con `flex` y separación adecuada.
+
+### ¿Qué aprendí?
+
+- A usar **`localStorage`** para guardar datos simples entre visitas.
+- A construir **modales accesibles** sin frameworks externos.
+- A gestionar eventos dinámicos con JavaScript puro.
+- A alternar estilos globales de forma dinámica (modo oscuro).
+- A combinar JavaScript con HTML semántico y CSS para mejorar la experiencia de usuario.
