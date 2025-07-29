@@ -48,3 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+const contador = localStorage.getItem('visitas') || 0;
+localStorage.setItem('visitas', Number(contador) + 1);
+
+const mensaje = document.createElement('p');
+mensaje.textContent = `Has visitado esta página ${Number(contador) + 1} veces.`;
+document.querySelector('footer').appendChild(mensaje);
